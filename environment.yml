@@ -8,7 +8,7 @@ dependencies:
   - dataclasses=0.8
   - pip:
       - tensorflow==2.5.0
-      - google-cloud-storage==1.40.0
+      - google-cloud-storage==2.1.0
       - testfixtures==6.17.1
       - transformers==4.8.2
       - optuna==2.8.0
