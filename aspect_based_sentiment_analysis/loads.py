@@ -4,7 +4,6 @@ from typing import Callable
 from typing import List
 
 import transformers
-from google.cloud.exceptions import NotFound
 
 from . import utils
 from .data_types import LabeledExample
@@ -58,9 +57,8 @@ def load_examples(
         examples = utils.load(local_path)
         return examples
 
-    except NotFound as error:
+    except:
         if os.path.isfile(local_path):
             os.remove(local_path)
         text = 'Dataset not found. Please check a documentation.'
         logger.error(text)
-        raise error
